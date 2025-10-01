@@ -1,0 +1,140 @@
+/* ===========================
+   Colores base
+=========================== */
+:root {
+  --bg: #444444;       /* gris oscuro similar a tu logo */
+  --accent: #ffcc00;   /* color para botones y detalles */
+  --text: #ffffff;     /* texto blanco */
+}
+
+/* ===========================
+   Reset básico
+=========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===========================
+   Fondo con manchas de leopardo
+=========================== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Si subes la imagen local al repositorio: img/leopard-pattern.png */
+  background-image: url('https://i.ibb.co/4jzFQ0Y/leopard-pattern.png');
+  opacity: 0.1;
+  z-index: -1;
+  background-repeat: repeat;
+}
+
+/* ===========================
+   Contenedor general
+=========================== */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* ===========================
+   Header
+=========================== */
+.header {
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.logo img {
+  width: 180px;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.menu a {
+  margin: 0 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Hero
+=========================== */
+#hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+/* ===========================
+   Grid de productos
+=========================== */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #ff9900;
+}
+
+/* ===========================
+   Footer
+=========================== */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  opacity: 0.8;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 600px) {
+  .menu a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
